@@ -51,6 +51,7 @@ crontab -c /etc/crontabs/ /etc/crontabs/root
 crond -c /etc/crontabs/
 #change crond directory
 
+###
 su -
 #echo "*/5 * * * * root reboot" >> /data/crontab/root
 mkdir /data/crontab/
