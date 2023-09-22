@@ -10,7 +10,7 @@ then
   echo "running"
 else
   echo "start crond"
-  busybox crond -b -c /data/crontab
+  #busybox crond -b -c /data/crontab
 fi
 
 echo
