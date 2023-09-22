@@ -64,6 +64,12 @@ then
     else
         printf "* ssl_helper: no\n"
     fi
+    if test -e "$BB_PATH/start_app.sh"
+    then
+        printf "* luomor: yes\n"
+    else
+        printf "* luomor: no\n"
+    fi
     if test -d /system/addon.d
     then
         if test -f /system/addon.d/99-busybox.sh
