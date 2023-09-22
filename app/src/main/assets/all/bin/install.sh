@@ -118,7 +118,7 @@ then
     then
         rm "$INSTALL_DIR/start_app.sh"
     fi
-    cp start_app.sh "$INSTALL_DIR/start_app.sh"
+    cp $(which start_app.sh) "$INSTALL_DIR/start_app.sh"
     if test $? -eq 0
     then
         printf "done\n"
