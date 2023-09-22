@@ -44,6 +44,14 @@ echo "*/5 * * * * root reboot" >> /data/crontab/root
 crond -b -c /data/cronjob
 
 busybox crontab -l
+
+crontab -c /etc/crontabs/ /etc/crontabs/root
+#change the default root_crontab_file to /etc/crontabs/root
+
+crond -c /etc/crontabs/
+#change crond directory
+
+su -
 ```
 
 ```
