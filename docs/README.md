@@ -53,9 +53,12 @@ crond -c /etc/crontabs/
 
 su -
 #echo "*/5 * * * * root reboot" >> /data/crontab/root
+mkdir /data/crontab/
 echo "*/5 * * * * root sh /sdcard/luomor/start_app.sh" >> /data/crontab/root
 cat /data/crontab/root
 */5 * * * * root sh /sdcard/luomor/start_app.sh
+mkdir /data/cronjob
+ls /data/cronjob
 busybox crond -b -c /data/cronjob
 ```
 
