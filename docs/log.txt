@@ -42,3 +42,23 @@ Options:
  -x <mask>  enable debugging
 
 Default operation is replace, per 1003.2
+
+
+crond  --help
+crond: invalid option -- '-'
+Usage:
+ crond [options]
+
+Options:
+ -h         print this message
+ -i         deamon runs without inotify support
+ -m <comm>  off, or specify preferred client for sending mails
+ -n         run in foreground
+ -p         permit any crontab
+ -P         use PATH="/usr/bin:/bin"
+ -c         enable clustering support
+ -s         log into syslog instead of sending mails
+ -V         print version and exit
+ -x <flag>  print debug information
+
+Debugging flags are: ext,sch,proc,pars,load,misc,test,bit
