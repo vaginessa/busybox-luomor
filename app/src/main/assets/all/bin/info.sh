@@ -76,3 +76,5 @@ then
 else
     printf "* not installed\n"
 fi
+
+printf "\nInstalled LuomorTool:\n"
