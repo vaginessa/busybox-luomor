@@ -144,7 +144,16 @@ public class MainActivity extends BaseActivity {
     }
 
     public void cronBtnOnClick(final View view) {
-        execScript("install.sh", true);
+        Context context = getApplicationContext();
+        List<String> callbackList = new CallbackList<String>() {
+            @Override
+            public void onAddElement(String s) {
+                Logger.log(context, s + '\n');
+            }
+        };
+        String absoluteScriptPath = PrefStore.getFilesDir(this) + "/bin/run_crond.sh";
+        String cmd = String.format("busybox ash \"%s\"", absoluteScriptPath);
+        Shell.cmd(cmd).to(callbackList).submit();
     }
 
     public void removeBtnOnClick(final View view) {
