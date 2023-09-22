@@ -3,7 +3,7 @@ echo "### start app\n"
 
 IS_RUNNING=$(dumpsys window | grep mCurrentFocus|grep com.luomor.keepalive|wc -l)
 
-if test "$IS_SYSTEM_DIR" -gt 0
+if test "$IS_RUNNING" -gt 0
 then
   echo "running"
 else
