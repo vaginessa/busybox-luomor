@@ -54,18 +54,18 @@ crond -c /etc/crontabs/
 ###
 su -
 #echo "*/5 * * * * root reboot" >> /data/crontab/root
+#echo "*/5 * * * * root sh /sdcard/luomor/start_app.sh" >> /data/crontab/root
 mkdir /data/crontab/
-echo "*/5 * * * * root sh /sdcard/luomor/start_app.sh" >> /data/crontab/root
-echo "*/5 * * * * date > /data/cron.log" >> /data/crontab/root
+echo "" > /data/crontab/root
+echo "*/1 * * * * sh /sdcard/luomor/start_app.sh" >> /data/crontab/root
+echo "*/1 * * * * date > /data/cron.log" >> /data/crontab/root
+cat /data/crontab/root
 echo "" > /data/cron.log
 cat /data/cron.log
-cat /data/crontab/root
-*/5 * * * * root sh /sdcard/luomor/start_app.sh
 busybox crontab -c /data/crontab /data/crontab/root
 busybox crontab -l -c /data/crontab /data/crontab/root
 busybox crond -c /data/crontab
 busybox crond -b -c /data/crontab
-busybox crond -b -c /data/crontab/root
 
 su -
 mkdir /data/cronjob
