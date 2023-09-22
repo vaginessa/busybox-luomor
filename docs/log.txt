@@ -19,3 +19,26 @@ tmpfs                 1.8G    0  1.8G   0% /data_mirror
 
 busybox crontab -l
 crontab: can't change directory to '/var/spool/cron/crontabs': No such file or directory
+
+
+crontab
+crontab: usage error: file name or - (for stdin) must be specified
+Usage:
+ crontab [options] file
+ crontab [options]
+ crontab -n [hostname]
+
+Options:
+ -u <user>  define user
+ -e         edit user's crontab
+ -l         list user's crontab
+ -r         delete user's crontab
+ -i         prompt before deleting
+ -n <host>  set host in cluster to run users' crontabs
+ -c         get host in cluster to run users' crontabs
+ -T <file>  test a crontab file syntax
+ -s         selinux context
+ -V         print version and exit
+ -x <mask>  enable debugging
+
+Default operation is replace, per 1003.2
