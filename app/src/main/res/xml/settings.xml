@@ -13,6 +13,11 @@
             android:summary="@string/summary_applets"
             android:title="@string/title_applets" />
         <CheckBoxPreference
+            android:defaultValue="@string/luomor"
+            android:key="luomor"
+            android:summary="@string/summary_luomor"
+            android:title="@string/title_luomor" />
+        <CheckBoxPreference
             android:defaultValue="@string/replace"
             android:key="replace"
             android:summary="@string/summary_replace"

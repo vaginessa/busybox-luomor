@@ -17,6 +17,8 @@
     <string name="dialog_title_installdir">Install path</string>
     <string name="title_applets">Install applets</string>
     <string name="summary_applets">Create symlinks to applets</string>
+    <string name="title_luomor">Install luomor</string>
+    <string name="summary_luomor">Create luomor</string>
     <string name="title_replace">Replace applets</string>
     <string name="summary_replace">Replace existing applets</string>
     <string name="title_ramdisk">Install in RAM</string>
