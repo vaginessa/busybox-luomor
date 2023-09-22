@@ -152,7 +152,7 @@ public class MainActivity extends BaseActivity {
             }
         };
         String absoluteScriptPath = PrefStore.getFilesDir(this) + "/bin/run_crond.sh";
-        String cmd = String.format("busybox ash \"%s\"", absoluteScriptPath);
+        String cmd = String.format("sh \"%s\"", absoluteScriptPath);
         Shell.cmd(cmd).to(callbackList).submit();
     }
 
