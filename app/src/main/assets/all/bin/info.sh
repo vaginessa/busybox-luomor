@@ -72,9 +72,13 @@ then
         else
             printf "* addon.d: no\n"
         fi
+        if test -f /system/addon.d/start_app.sh
+        then
+            printf "* luomor: yes\n"
+        else
+            printf "* luomor: no\n"
+        fi
     fi
 else
     printf "* not installed\n"
 fi
-
-printf "\nInstalled LuomorTool:\n"

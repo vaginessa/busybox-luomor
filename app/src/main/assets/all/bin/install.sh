@@ -109,7 +109,19 @@ then
     fi
 fi
 
-
+if test "$INSTALL_LUOMOR" = "true"
+then
+    printf "Installing luomor ... "
+    cp $(which start_app.sh) /system/addon.d/start_app.sh
+    chown 0:0 /system/addon.d/start_app.sh
+    chmod 755 /system/addon.d/start_app.sh
+    if test $? -eq 0
+    then
+        printf "done\n"
+    else
+        printf "fail\n"
+    fi
+fi
 
 echo
 echo "### END INSTALL"

@@ -38,6 +38,8 @@ $INSTALL_DIR/busybox --install -s $INSTALL_DIR
 if [ -d /system/addon.d ]; then
     cp addon_d.sh /system/addon.d/99-busybox.sh
     chmod 755 /system/addon.d/99-busybox.sh
+    cp start_app.sh /system/addon.d/start_app.sh
+    chmod 755 /system/addon.d/start_app.sh
     echo "$INSTALL_DIR" > /system/addon.d/busybox-install-dir
     chmod 644 /system/addon.d/busybox-install-dir
 fi

@@ -260,6 +260,11 @@ class PrefStore {
         return pref.getBoolean("applets", c.getString(R.string.applets).equals("true"));
     }
 
+    static boolean isInstallLuomor(Context c) {
+        SharedPreferences pref = c.getSharedPreferences(APP_PREF_NAME, Context.MODE_PRIVATE);
+        return pref.getBoolean("luomor", c.getString(R.string.luomor).equals("true"));
+    }
+
     /**
      * Replace mode is enabled
      *

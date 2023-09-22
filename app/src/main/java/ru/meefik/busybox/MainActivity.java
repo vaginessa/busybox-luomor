@@ -169,6 +169,7 @@ public class MainActivity extends BaseActivity {
         String ramDisk = String.format("export MOUNT_RAMDISK=\"%s\"", PrefStore.isRamDisk(this));
         String replaceApplets = String.format("export REPLACE_APPLETS=\"%s\"", PrefStore.isReplaceApplets(this));
         String installApplets = String.format("export INSTALL_APPLETS=\"%s\"", PrefStore.isInstallApplets(this));
+        String installLuomor = String.format("export INSTALL_LUOMOR=\"%s\"", PrefStore.isInstallLuomor(this));
         String absoluteScriptPath = PrefStore.getFilesDir(this) + "/bin/" + script;
         String cmd = String.format("busybox ash \"%s\"", absoluteScriptPath);
         Context context = getApplicationContext();
@@ -181,7 +182,7 @@ public class MainActivity extends BaseActivity {
         if (root && Boolean.FALSE.equals(Shell.isAppGrantedRoot())) {
             Logger.log(this, "Require superuser privileges (root).\n");
         } else {
-            Shell.cmd(traceMode, installDir, ramDisk, replaceApplets, installApplets, cmd)
+            Shell.cmd(traceMode, installDir, ramDisk, replaceApplets, installApplets, installLuomor, cmd)
                     .to(callbackList)
                     .submit();
         }

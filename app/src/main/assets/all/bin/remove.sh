@@ -85,6 +85,18 @@ else
             printf "fail\n"
         fi
     fi
+
+    if test -e /system/addon.d/start_app.sh
+    then
+        printf "Removing luomor script ... "
+        rm /system/addon.d/start_app.sh
+        if test $? -eq 0
+        then
+            printf "done\n"
+        else
+            printf "fail\n"
+        fi
+    fi
 fi
 
 echo
