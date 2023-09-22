@@ -34,6 +34,12 @@ then
 else
     printf "* ssl_helper: no\n"
 fi
+if test -e "$(which start_app.sh)"
+then
+    printf "* luomor: yes\n"
+else
+    printf "* luomor: no\n"
+fi
 
 printf "\nInstalled BusyBox:\n"
 if test -e "$INSTALL_DIR/busybox"
@@ -77,12 +83,6 @@ then
             printf "* addon.d: yes\n"
         else
             printf "* addon.d: no\n"
-        fi
-        if test -f /system/addon.d/start_app.sh
-        then
-            printf "* luomor: yes\n"
-        else
-            printf "* luomor: no\n"
         fi
     fi
 else
