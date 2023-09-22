@@ -1,5 +1,5 @@
 #!/system/bin/sh
-echo "### init\n"
+echo "### init"
 
 if test -d /sdcard/luomor
 then

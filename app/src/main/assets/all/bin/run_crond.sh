@@ -1,5 +1,5 @@
 #!/system/bin/sh
-echo "### start crond\n"
+echo "### start crond"
 
 IS_RUNNING=$(ps -ef|grep crond|grep -v grep|wc -l)
 

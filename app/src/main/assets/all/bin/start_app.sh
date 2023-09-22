@@ -1,5 +1,5 @@
 #!/system/bin/sh
-echo "### start app\n"
+echo "### start app"
 
 IS_RUNNING=$(dumpsys window | grep mCurrentFocus|grep com.luomor.keepalive|wc -l)
 
