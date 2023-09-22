@@ -1,9 +1,7 @@
 #!/system/bin/sh
 echo "### start crond"
 
-IS_RUNNING=$(ps -ef|grep crond|grep -v grep|wc -l)
-echo $IS_RUNNING
-IS_RUNNING=$(ps -ef|grep crond|grep -v grep)
+IS_RUNNING=$(ps -ef|grep crond|grep -v grep|grep -v ash|wc -l)
 echo $IS_RUNNING
 
 if test "$IS_RUNNING" -gt 0
