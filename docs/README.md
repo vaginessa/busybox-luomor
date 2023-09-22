@@ -43,3 +43,41 @@ su -
 echo "*/5 * * * * root reboot" >> /data/crontab/root
 crond -b -c /data/cronjob
 ```
+
+```
+Requirements
+
+Root access
+Busybox : for 'crond' service
+/system/etc/init.d folder to start 'crond' service at boot
+Creating cronjob Create the cronjob file in directory /data/crontab/ with filename root. Write your cronjob inside the file 'root'. Set executable permissions for the file 'root'
+
+Test without rebooting Now open any terminal emulator in device and run the following commands..
+
+su -
+crond -b -c /data/cronjob
+Now the crond service will start, to check type...
+
+top | grep crond
+Start crond at boot
+
+mount system partition in read write :
+
+su -
+
+mount -o remount,rw /system
+
+Create a file 99my_daemon at /system/etc/init.d with executable permission and enter the following lines
+
+crond -b -c /data/crond
+
+Close writing the /system partition
+
+mount -o remount,rw /system
+
+And reboot
+
+Example of cron filename root
+
+*/15 * * * * reboot
+```
