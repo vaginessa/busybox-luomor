@@ -18,12 +18,14 @@ do_action() {
     [ ! -f "$local_bb" ] && exit 1
     backup_file "$bb"
     backup_file "$bb_install/ssl_helper"
+    backup_file "$bb_install/start_app.sh"
     echo "$bb_install" > /tmp/busybox-install-dir
   elif [ "$action" = "restore" ]; then
     local_bb="$C/$bb"
     [ ! -f "$local_bb" ] && exit 1
     restore_file "$bb"
     restore_file "$bb_install/ssl_helper"
+    restore_file "$bb_install/start_app.sh"
   fi
 
   "$local_bb" --list | while read applet; do
