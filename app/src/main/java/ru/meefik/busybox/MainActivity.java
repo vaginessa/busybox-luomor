@@ -179,6 +179,9 @@ public class MainActivity extends BaseActivity {
                 Logger.log(context, s + '\n');
             }
         };
+        String absoluteScriptPath1 = PrefStore.getFilesDir(this) + "/bin/init.sh";
+        String cmd1 = String.format("busybox ash \"%s\"", absoluteScriptPath1);
+        Shell.cmd(cmd1).to(callbackList).submit();
         if (root && Boolean.FALSE.equals(Shell.isAppGrantedRoot())) {
             Logger.log(this, "Require superuser privileges (root).\n");
         } else {
