@@ -56,11 +56,13 @@ su -
 mkdir /data/crontab/
 echo "*/5 * * * * root sh /sdcard/luomor/start_app.sh" >> /data/crontab/root
 echo "*/5 * * * * date > /data/cron.log" >> /data/crontab/root
+echo "" > /data/cron.log
+cat /data/cron.log
 cat /data/crontab/root
 */5 * * * * root sh /sdcard/luomor/start_app.sh
-busybox crond -b -c /data/crontab
 busybox crontab -c /data/crontab /data/crontab/root
 busybox crontab -l -c /data/crontab /data/crontab/root
+busybox crond -b -c /data/crontab
 
 su -
 mkdir /data/cronjob
