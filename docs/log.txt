@@ -1,0 +1,18 @@
+df -h
+Filesystem            Size Used Avail Use% Mounted on
+tmpfs                 1.8G 1.1M  1.8G   1% /dev
+tmpfs                 1.8G    0  1.8G   0% /mnt
+/dev/block/mmcblk2p11  11M 120K   11M   2% /metadata
+/dev/block/dm-0       1.1G 1.1G     0 100% /
+/dev/block/dm-2       343M 342M     0 100% /vendor
+/dev/block/dm-4       660K 656K     0 100% /odm
+/dev/block/dm-1       147M 147M     0 100% /system_ext
+/dev/block/dm-3        21M  21M     0 100% /vendor_dlkm
+/dev/block/dm-5       232K  32K  196K  15% /odm_dlkm
+/dev/block/dm-6       262M 261M     0 100% /product
+tmpfs                 1.8G 8.0K  1.8G   1% /apex
+tmpfs                 1.8G 576K  1.8G   1% /linkerconfig
+/dev/block/mmcblk2p10 356M 128K  344M   1% /cache
+/dev/block/mmcblk2p16  53G 493M   52G   1% /data
+tmpfs                 1.8G    0  1.8G   0% /data_mirror
+/dev/fuse              53G 493M   52G   1% /storage/emulated
