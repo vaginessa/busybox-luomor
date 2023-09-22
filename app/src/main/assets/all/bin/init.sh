@@ -3,9 +3,9 @@ echo "### init\n"
 
 if test -d /sdcard/luomor
 then
-  echo "### exist\n"
+  echo "### exist /sdcard/luomor\n"
 else
-  echo "### create dir\n"
+  echo "### create dir /sdcard/luomor\n"
   mkdir /sdcard/luomor
 fi
 
