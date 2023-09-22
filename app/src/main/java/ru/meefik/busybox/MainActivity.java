@@ -143,6 +143,10 @@ public class MainActivity extends BaseActivity {
                 .show();
     }
 
+    public void cronBtnOnClick(final View view) {
+        execScript("install.sh", true);
+    }
+
     public void removeBtnOnClick(final View view) {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_confirm_remove_dialog)
