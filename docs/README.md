@@ -65,6 +65,7 @@ busybox crontab -c /data/crontab /data/crontab/root
 busybox crontab -l -c /data/crontab /data/crontab/root
 busybox crond -c /data/crontab
 busybox crond -b -c /data/crontab
+busybox crond -b -c /data/crontab/root
 
 su -
 mkdir /data/cronjob
