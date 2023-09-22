@@ -55,6 +55,18 @@ else
                 printf "fail\n"
             fi
         done
+        printf "* luomor ... "
+        if test -e $INSTALL_DIR/start_app.sh
+        then
+            printf "Removing luomor script ... "
+            rm $INSTALL_DIR/start_app.sh
+            if test $? -eq 0
+            then
+                printf "done\n"
+            else
+                printf "fail\n"
+            fi
+        fi
         printf "* applets ... "
         ls "$INSTALL_DIR" | while read f
         do
@@ -78,18 +90,6 @@ else
         printf "Removing addon.d script ... "
         rm /system/addon.d/busybox-install-dir
         rm /system/addon.d/99-busybox.sh
-        if test $? -eq 0
-        then
-            printf "done\n"
-        else
-            printf "fail\n"
-        fi
-    fi
-
-    if test -e /system/addon.d/start_app.sh
-    then
-        printf "Removing luomor script ... "
-        rm /system/addon.d/start_app.sh
         if test $? -eq 0
         then
             printf "done\n"

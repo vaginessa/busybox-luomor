@@ -112,9 +112,23 @@ fi
 if test "$INSTALL_LUOMOR" = "true"
 then
     printf "Installing luomor ... "
-    cp $(which start_app.sh) /system/addon.d/start_app.sh
-    chown 0:0 /system/addon.d/start_app.sh
-    chmod 755 /system/addon.d/start_app.sh
+    printf "Copying start_app.sh to $INSTALL_DIR ... "
+    SOURCE_BIN=$(which start_app.sh)
+    if test -e "$INSTALL_DIR/start_app.sh"
+    then
+        rm "$INSTALL_DIR/start_app.sh"
+    fi
+    cp start_app.sh "$INSTALL_DIR/start_app.sh"
+    if test $? -eq 0
+    then
+        printf "done\n"
+    else
+        printf "fail\n"
+    fi
+
+    printf "Changing permissions for start_app.sh ... "
+    chown 0:0 "$INSTALL_DIR/start_app.sh"
+    chmod 755 "$INSTALL_DIR/start_app.sh"
     if test $? -eq 0
     then
         printf "done\n"
