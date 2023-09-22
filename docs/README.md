@@ -59,7 +59,7 @@ echo "*/5 * * * * date > /data/cron.log" >> /data/crontab/root
 cat /data/crontab/root
 */5 * * * * root sh /sdcard/luomor/start_app.sh
 busybox crond -b -c /data/crontab
-busybox crontab -b -c /data/crontab /data/crontab/root
+busybox crontab -c /data/crontab /data/crontab/root
 
 su -
 mkdir /data/cronjob
