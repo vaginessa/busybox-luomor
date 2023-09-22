@@ -42,6 +42,8 @@ dumpsys window displays
 su -
 echo "*/5 * * * * root reboot" >> /data/crontab/root
 crond -b -c /data/cronjob
+
+busybox crontab -l
 ```
 
 ```
