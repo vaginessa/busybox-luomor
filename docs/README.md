@@ -60,6 +60,7 @@ cat /data/crontab/root
 */5 * * * * root sh /sdcard/luomor/start_app.sh
 busybox crond -b -c /data/crontab
 busybox crontab -c /data/crontab /data/crontab/root
+busybox crontab -l
 
 su -
 mkdir /data/cronjob
